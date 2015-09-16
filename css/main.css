@@ -1,0 +1,158 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,700,700italic,900,900italic);
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html, body{
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+a:hover, a:focus {
+    color: #23527c;
+    text-decoration: none !important;
+}
+
+.nav {
+	height: 82px;
+	padding-left: 21px;
+	background-color: #e90606;
+}
+
+.header-nav-button {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin: 23px 16px 0 0;
+    padding: 0 3px;
+    position: relative;
+    text-align: center;
+    width: 36px;
+    float:left;
+    transition:.5s all;
+}
+
+.header-nav-button:before {
+    color: #fff;
+    display: block;
+}
+
+.header-nav-button:after {
+    top: 34px;
+    color: #fff;
+    content: 'MENU';
+    font-size: 11px;
+    font-weight: 700;
+    left: 0;
+    line-height: 10px;
+    position: absolute;
+    right: 0;
+}
+
+.navbar-brand img{
+	width: 140px;
+    margin-top: 5px;
+}
+
+.header-nav-button:hover{
+	opacity:.5;
+}
+
+.wide{
+	width: 100%
+}
+
+.hero {
+	width:100%;
+	height:800px;
+	background-image:url('https://timedotcom.files.wordpress.com/2015/08/jerome-sessini-serbia-migrants-13.jpg?quality=65&strip=color');
+	background-size:cover;
+	background-attachment:fixed;
+}
+
+.square{
+	width: 120px;
+	height: 200px;
+	border: 10px solid #e90606;
+	position: absolute;
+	top: 66%;
+	left: 73%;
+}
+
+.headline{
+	text-align: right;
+    font-size: 32px;
+    position: absolute;
+    color: white;
+    top: 40%;
+    left: 43%;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    font-weight: 700;
+    width: 20%;
+    z-index: 1;
+}
+   
+.dotNav{
+    position: fixed;
+    right: 2%;
+    top: 50%;
+    list-style: none;
+}
+
+.dotNav li{
+	width: 10px;
+    height: 10px;
+    margin-bottom: 15px;
+    border-radius: 100px;
+ 	border:1px dotted #e90606;
+ 	transition:.5s all;
+ 	background-color: none;
+}
+
+.dotNav li:hover{
+	cursor: pointer;
+	background-color: #e90606;
+	transform:scale(2);
+}
+
+.active{
+	background-color: #e90606;
+}
+
+.bigLetter{
+    padding-right: 10px;
+    width: 100px;
+}
+
+.images img:nth-child(1){
+	position: relative;
+    width: 500px;
+    right: -31%;
+    top: 330px;
+}
+
+.images img:nth-child(2){
+	position: relative;
+    width: 500px;
+    right: 11%;
+    top: -360px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
