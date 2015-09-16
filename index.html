@@ -9,6 +9,10 @@
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
+        <link rel='stylesheet' href='https://api.mapbox.com/mapbox.js/plugins/mapbox-directions.js/v0.3.0/mapbox.directions.css' type='text/css' />
+        <script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
+        <script src='https://api.mapbox.com/mapbox.js/plugins/mapbox-directions.js/v0.3.0/mapbox.directions.js'></script>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
 
@@ -52,13 +56,15 @@
 
     Magnum photographer Jerome Sessini was with one of these families last month, as he covered the mounting crisis in the northern parts of Serbia. “There are entire villages that serve as meeting points ahead of the Hungarian border,” he tells TIME. The nonstop influx of migrants and refugees has taken its toll on the locals. “I’ve seen 300 migrants in one village alone,” says Sessini.
   
-    <div class="images">
-      <img src="https://timedotcom.files.wordpress.com/2015/08/jerome-sessini-serbia-migrants-15.jpg?quality=65&strip=color&w=745">
-      <img src="https://timedotcom.files.wordpress.com/2015/08/jerome-sessini-serbia-migrants-19.jpg?quality=65&strip=color&w=745">
-    </div>
-    <p>To prevent further tensions, local volunteers set up a camp 10 miles from the border, and every hour a bus shuttles migrants from the villages to the camp. There, they find running water, food and toilets, as well as a translator who informs them that they can rest.
+    To prevent further tensions, local volunteers set up a camp 10 miles from the border, and every hour a bus shuttles migrants from the villages to the camp. There, they find running water, food and toilets, as well as a translator who informs them that they can rest.
 
     In the camp, Sessini found one Syrian family from Aleppo. Like many other families fleeing the devastating war between Bashar Assad’s forces and various rebel factions, as well as the terrifying Islamic State advances, they had traveled through Turkey, Greece, Macedonia and most of Serbia. “Each night, around 6 p.m., large groups walk from the camp to [the village of] Horgos at the border,” says Sessini. “Some walk, others board buses.”
+
+      <div class="images">
+        <img data-stellar-ratio=".7" src="https://timedotcom.files.wordpress.com/2015/08/jerome-sessini-serbia-migrants-15.jpg?quality=65&strip=color&w=745">
+        <img data-stellar-ratio=".9" src="https://timedotcom.files.wordpress.com/2015/08/jerome-sessini-serbia-migrants-19.jpg?quality=65&strip=color&w=745">
+        <h2 id="quote" data-stellar-ratio=".9">“Some walk, others board buses.”</h2>
+      </div>
 
 
     Only five miles separate Horgos from Hungary, and most migrants wait until midnight to embark on that final stretch. Groups are formed and no one travels alone — “there were reports that [bandits] had attacked and robbed some of the migrants,” says Sessini, “so they don’t take any chances: they travel in groups with one or two baseball bats, a smartphone and GPS.”
@@ -67,6 +73,25 @@
 
     The next night, as Sessini learned later, the Syrian family made it into Hungary — “One of them is even in Germany now,” he says — but many other families who will follow in their footsteps have miles left to go.
 
+  <div id='map'></div>
+
+  <script>
+  L.mapbox.accessToken = 'pk.eyJ1IjoiZGFtNDIyMiIsImEiOiJjaWVuOHZ0NTQwN2Z2cnNrbTJmNWZodnF3In0.ZIC7guvvMdYcpHrIKG6_hw';
+  var map = L.mapbox.map('map', 'mapbox.streets', {
+    zoomControl: false
+  }).setView([41.0252, 28.9950], 11);
+
+  // Disable drag and zoom handlers.
+  map.dragging.disable();
+  map.touchZoom.disable();
+  map.doubleClickZoom.disable();
+  map.scrollWheelZoom.disable();
+
+  // Disable tap handler, if present.
+  if (map.tap) map.tap.disable();
+  </script>
+
+  
     Jerome Sessini is a photographer represented by Magnum Photos.
 
     Kira Pollack, who edited this photo essay, is TIME’s Director of Photography and Visual Enterprise.
@@ -74,7 +99,7 @@
     Olivier Laurent is the editor of TIME LightBox. Follow him on Twitter and Instagram @olivierclaurent
 
     Follow TIME LightBox on Facebook, Twitter and Instagram.
-    </p>
+   
 
     </div>
     <div class="col-sm-4"></div>
