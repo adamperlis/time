@@ -28,3 +28,18 @@ $(".play").click(function() {
 $(".lightbox").click(function() {
   $( ".lightbox" ).removeClass("animated zoomIn on");
 });
+
+//article pop into nav
+$(window).bind('scroll', function(){
+    var offset = $(document).scrollTop()
+
+    console.log(offset)
+    if( offset>=500 ){
+    	$(".nav-headline").removeClass('animated fadeOutDown');
+        $(".nav-headline").addClass('animated fadeInUp');
+    }else{
+    	$(".nav-headline").removeClass('animated fadeInUp');
+       	$(".nav-headline").addClass('animated fadeOutDown');
+    }
+
+});

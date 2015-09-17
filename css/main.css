@@ -283,6 +283,20 @@
         visibility: visible;
     }
 
+    .nav-headline{
+        left: -64px;
+        position: relative;
+        top: 11px;
+        color: white;
+        font-size: 17px;
+        font-style: italic;
+        font-weight: 800;
+    }
+
+    .nav-headline i {
+        padding-right: 17px;
+    }
+
 @media screen 
   and (min-width: 1600px) 
   and (max-width: 2600px){ 
