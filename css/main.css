@@ -7,6 +7,7 @@
 
 html, body{
 	font-family: 'Source Sans Pro', sans-serif;
+    overflow-x:hidden;
 }
 
 a:hover, a:focus {
@@ -84,7 +85,7 @@ a:hover, a:focus {
 
 .headline{
 	text-align: right;
-    font-size: 32px;
+    font-size: 36px;;
     position: absolute;
     color: white;
     top: 40%;
@@ -137,8 +138,7 @@ a:hover, a:focus {
     position: relative;
     width: 500px;
     right: -91%;
-    top: 300px;
-}
+    top: 190px;}
 
 .images img:nth-child(2){
     position: relative;
@@ -156,6 +156,28 @@ a:hover, a:focus {
     position: relative;
     border-bottom: 4px solid #e90606;
     padding-bottom: 10px;
+}
+
+.time{
+    margin: 0 0 10px;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 12px;
+    top: -225px;
+    left: -62px;
+    color:#e90606;
+    position: relative;
+}
+
+.description{
+    margin: 0 0 10px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    top: -225px;
+    left: -62px;
+    color:black;
+    position: relative;
 }
 
 #map { 
@@ -200,6 +222,62 @@ a:hover, a:focus {
     top: 90px;
     left: 10px;
 }
+
+.lightbox{
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,.75);
+    position: absolute;
+    z-index: 2;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto 0;
+    display:none;
+}
+
+.vertical-center {
+    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 4;
+}
+
+.watch-now{
+    position: absolute;
+    top: 75%;
+    left: 73%;
+    font-size: 14px;
+    color: white;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.play{
+    position: absolute;
+    top: 73%;
+    left: 78.5%;
+    font-size: 50px;
+    color: #e90606;
+    transition:.5s all cubic-bezier(0.075, 0.820, 0.165, 1.000);
+    z-index: 2;
+}
+
+.play:hover{
+    transform:scale(1.25);
+    cursor: pointer;
+}
+
+.on{
+    display:block;
+}
+
+
 
 
 

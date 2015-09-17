@@ -15,6 +15,7 @@
         <script src='https://api.mapbox.com/mapbox.js/plugins/mapbox-directions.js/v0.3.0/mapbox.directions.js'></script>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/animate.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
@@ -44,7 +45,7 @@
       <div class="headline">See How Syrian Refugees Journey From Serbia to Hungary</div>
       <div class='hero' data-stellar-background-ratio=".25"></div>
       <div class="square" data-stellar-ratio="2"></div>
-      <div class="line"></div>
+      <div class="watch-now">Watch Now</div><i class="play fa fa-play-circle"></i>
     </div>
     <div class="row" style="padding-top:40px">
     <div class="col-sm-4"></div>
@@ -64,6 +65,8 @@
         <img data-stellar-ratio=".7" src="https://timedotcom.files.wordpress.com/2015/08/jerome-sessini-serbia-migrants-15.jpg?quality=65&strip=color&w=745">
         <img data-stellar-ratio=".9" src="https://timedotcom.files.wordpress.com/2015/08/jerome-sessini-serbia-migrants-19.jpg?quality=65&strip=color&w=745">
         <h2 id="quote" data-stellar-ratio=".9">“Some walk, others board buses.”</h2>
+        <p class="time" data-stellar-ratio=".9">SEPT. 1 | 4:59am</p>
+        <p class="description" data-stellar-ratio=".9">A Syrian migrant family on the Hungarian boarder</p>
       </div>
 
 
@@ -72,14 +75,21 @@
     That night, as Sessini followed the Syrian family, the police showed up as they were about to cross into Hungary. “They stopped us all,” he says. “I told them I was a journalist and they said I was not allowed to be there.” Even though Sessini had done nothing wrong, he was told not to come back to Horgos. “I hesitated,” he explains. “But I was afraid I’d lose all my photos. I regret it now, as I feel like I abandoned them.”
 
     The next night, as Sessini learned later, the Syrian family made it into Hungary — “One of them is even in Germany now,” he says — but many other families who will follow in their footsteps have miles left to go.
+  </div>
+  <div class="col-sm-4"></div>
+  </div>
 
+  <div class="row" style="padding-top:40px">
   <div id='map'></div>
+  </div>
+
+
 
   <script>
   L.mapbox.accessToken = 'pk.eyJ1IjoiZGFtNDIyMiIsImEiOiJjaWVuOHZ0NTQwN2Z2cnNrbTJmNWZodnF3In0.ZIC7guvvMdYcpHrIKG6_hw';
   var map = L.mapbox.map('map', 'mapbox.streets', {
     zoomControl: false
-  }).setView([41.0252, 28.9950], 11);
+  }).setView([35.031105, 38.969548], 5);
 
   // Disable drag and zoom handlers.
   map.dragging.disable();
@@ -89,7 +99,30 @@
 
   // Disable tap handler, if present.
   if (map.tap) map.tap.disable();
+
+ var popup = L.popup()
+  .setLatLng([46.107741, 19.939152])
+  .setContent("Distance traveled 2,516 km")
+  .openOn(map);
+
+  var marker = L.marker([35.031105, 38.969548]).addTo(map);
+  var marker = L.marker([46.107741, 19.939152]).addTo(map);
+
+  var latlngs = [
+    [35.031105, 38.969548],
+    [46.107741, 19.939152]
+  ];
+
+  // create a red polyline from an arrays of LatLng points
+  var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
+
+  // zoom the map to the polyline
+  map.fitBounds(polyline.getBounds());
+
   </script>
+   <div class="row" style="padding-top:40px">
+   <div class="col-sm-4"></div>
+   <div class="col-sm-4">
 
   
     Jerome Sessini is a photographer represented by Magnum Photos.
@@ -100,12 +133,13 @@
 
     Follow TIME LightBox on Facebook, Twitter and Instagram.
    
-
+  </div>
+  <div class="col-sm-4"></div>
+  </div>
+   
+    <div class="lightbox">
+      <object class="vertical-center" id="flashObj" width="100%" height="394" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,47,0"><param name="movie" value="http://c.brightcove.com/services/viewer/federated_f9?isVid=1&isUI=1" /><param name="bgcolor" value="#FFFFFF" /><param name="flashVars" value="videoId=4476182251001&linkBaseURL=http%3A%2F%2Fti.me%2F1L54RIZ&playerID=1917933886001&playerKey=AQ~~,AAAAABGEUMg~,hNlIXLTZFZn-NQOazMchMDWH0SI1hX7f&domain=embed&dynamicStreaming=true" /><param name="base" value="http://admin.brightcove.com" /><param name="seamlesstabbing" value="false" /><param name="allowFullScreen" value="true" /><param name="swLiveConnect" value="true" /><param name="allowScriptAccess" value="always" /><embed src="http://c.brightcove.com/services/viewer/federated_f9?isVid=1&isUI=1" bgcolor="#FFFFFF" flashVars="videoId=4476182251001&linkBaseURL=http%3A%2F%2Fti.me%2F1L54RIZ&playerID=1917933886001&playerKey=AQ~~,AAAAABGEUMg~,hNlIXLTZFZn-NQOazMchMDWH0SI1hX7f&domain=embed&dynamicStreaming=true" base="http://admin.brightcove.com" name="flashObj" width="700" height="394" seamlesstabbing="false" type="application/x-shockwave-flash" allowFullScreen="true" allowScriptAccess="always" swLiveConnect="true" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></embed></object>
     </div>
-    <div class="col-sm-4"></div>
-    </div>
-
-  <!--   <object id="flashObj" width="700" height="394" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,47,0"><param name="movie" value="http://c.brightcove.com/services/viewer/federated_f9?isVid=1&isUI=1" /><param name="bgcolor" value="#FFFFFF" /><param name="flashVars" value="videoId=4476182251001&linkBaseURL=http%3A%2F%2Fti.me%2F1L54RIZ&playerID=1917933886001&playerKey=AQ~~,AAAAABGEUMg~,hNlIXLTZFZn-NQOazMchMDWH0SI1hX7f&domain=embed&dynamicStreaming=true" /><param name="base" value="http://admin.brightcove.com" /><param name="seamlesstabbing" value="false" /><param name="allowFullScreen" value="true" /><param name="swLiveConnect" value="true" /><param name="allowScriptAccess" value="always" /><embed src="http://c.brightcove.com/services/viewer/federated_f9?isVid=1&isUI=1" bgcolor="#FFFFFF" flashVars="videoId=4476182251001&linkBaseURL=http%3A%2F%2Fti.me%2F1L54RIZ&playerID=1917933886001&playerKey=AQ~~,AAAAABGEUMg~,hNlIXLTZFZn-NQOazMchMDWH0SI1hX7f&domain=embed&dynamicStreaming=true" base="http://admin.brightcove.com" name="flashObj" width="700" height="394" seamlesstabbing="false" type="application/x-shockwave-flash" allowFullScreen="true" allowScriptAccess="always" swLiveConnect="true" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></embed></object> -->
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>

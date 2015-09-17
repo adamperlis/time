@@ -21,3 +21,10 @@ $(window).bind('scroll', function(){
     fading.css('opacity',opacity).html(opacity);
 });
 
+$(".play").click(function() {
+  $( ".lightbox" ).addClass("animated zoomIn on");
+});
+
+$(".lightbox").click(function() {
+  $( ".lightbox" ).removeClass("animated zoomIn on");
+});
