@@ -234,7 +234,7 @@ a:hover, a:focus {
     right:0;
     bottom:0;
     margin:auto 0;
-    display:none;
+    visibility: hidden
 }
 
 .vertical-center {
@@ -274,7 +274,7 @@ a:hover, a:focus {
 }
 
 .on{
-    display:block;
+    visibility: visible;
 }
 
 
