@@ -42,4 +42,5 @@ $(window).bind('scroll', function(){
        	$(".nav-headline").addClass('animated fadeOutDown');
     }
 
+
 });
